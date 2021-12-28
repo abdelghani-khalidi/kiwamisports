@@ -212,6 +212,7 @@ class ShopifyProductTemplateEpt(models.Model):
                         "variant_id": variant_data.get("id"),
                         "sequence": variant_data.get("position"),
                         "default_code": variant_data.get("sku", ""),
+                        "hs_code": variant_data.get("harmonizedSystemCode"),
                         "inventory_item_id": variant_data.get("inventory_item_id"),
                         "inventory_management": "shopify" if variant_data.get(
                             "inventory_management") == "shopify" else "Dont track Inventory",
